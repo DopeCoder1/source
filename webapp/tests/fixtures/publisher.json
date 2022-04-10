@@ -1,0 +1,51 @@
+[
+  {
+    "model": "webapp.publisher",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "name": "Детектив",
+      "phone": 5467890
+    }
+  },
+
+  {
+    "model": "webapp.publisher",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "name": "Детектив",
+      "phone": 5467890
+    }
+  },
+
+  {
+    "model": "webapp.publisher",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "name": "Детектив",
+      "phone": 5467890
+    }
+  },
+
+  {
+    "model": "webapp.publisher",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "name": "Детектив",
+      "phone": 5467890
+    }
+  },
+
+  {
+    "model": "webapp.publisher",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "name": "Детектив",
+      "phone": 5467890
+    }
+  }
+]

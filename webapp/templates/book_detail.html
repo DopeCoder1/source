@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Книга{% endblock %}
+{% block content %}
+    <div class="m-3">
+        <p>Название: {{ book.title }}</p>
+        <p>Описание: {{ book.description }}</p>
+        <p>Версия: {{ book.type }}</p>
+        <p>Автор: {{ book.author }}</p>
+        <p>Издательство: {{ book.publisher.name }}</p>
+        {% if book.amount > 0 %}
+        <p>Количество: {{ book.amount }}</p>
+        {% endif %}
+            <a class="btn btn-dark" href="{% url 'webapp:book_delete' book.pk %}">Удалить книгу</a>
+            <a class="btn btn-dark" href="{% url 'webapp:book_update' book.pk %}">Изменить книгу</a>
+    </div>
+{% endblock %}

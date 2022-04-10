@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Изменить заказ{% endblock %}
+
+{% block content %}
+    <h4>Изменить заказ:</h4>
+        <form action="{% url 'webapp:order_update' order.pk %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-dark">Сохранить</button>
+        </form>
+{% endblock %}

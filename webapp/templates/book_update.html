@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Изменить книгу{% endblock %}
+{% block content %}
+    <h4>Изменить книгу:</h4>
+    <form action="{% url 'webapp:book_update' form.instance.pk %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-dark">Сохранить</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'student.html' %}
+{% block title %}Личный Кабинет{% endblock %}
+{% block content %}
+    <h2 align="center">Личный Кабинет</h2>
+    <h3>Логин:{{ user.username }}</h3>
+    <h3>Имя:{{ user.first_name }}</h3>
+   <h3>Фамилия:{{ user.last_name }}</h3>
+
+
+{% endblock %}

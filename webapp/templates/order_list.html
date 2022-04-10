@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Заказы{% endblock %}
+{% block content %}
+   <div class="card-deck">
+    {% for b in order_list %}
+  <div class="card">
+{#    <img class="card-img-top" src="..." alt="Card image cap">#}
+    <div class="card-body">
+      <h5 class="card-title">Заказ<a href="{% url 'webapp:order_detail' b.pk %}">№{{ b.id }}</a></h5>
+      <p class="card-text">Издатель:{{ b.publisher }}</p>
+      <p class="card-text">Статус:<small class="text-muted">{{ b.status }}</small></p>
+    </div>
+  </div>
+
+    {% endfor %}
+</div>
+{% endblock %}

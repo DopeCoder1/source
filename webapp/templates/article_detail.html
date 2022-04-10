@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Книга{% endblock %}
+{% block content %}
+    <div class="m-3">
+        <p>Преподаватель:: {{ article.teacher.user }}</p>
+        <p>Тема: {{ article.title }}</p>
+        <p>Описание: {{ article.desc }}</p>
+        <p>Создан: {{ article.created_at }}</p>
+        <p>Обновление: {{ article.updated_at }}</p>
+        <p>Категория: {{ article.category }}</p>
+        <p>Ссылка: {{ article.link }}</p>
+
+            <a class="btn btn-dark" href="{% url 'webapp:article_delete' article.pk %}">Удалить статью</a>
+            <a class="btn btn-dark" href="{% url 'webapp:article_update' article.pk %}">Изменить статью</a>
+    </div>
+{% endblock %}

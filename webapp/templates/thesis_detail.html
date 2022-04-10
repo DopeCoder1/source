@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Дипломная работа{% endblock %}
+{% block content %}
+    <div class="m-3">
+        <p>ФИО - Cтудента: {{ thesis.student }}</p>
+        <p>Название темы на RU:{{ thesis.name_ru }}</p>
+        <p>Название темы на KZ:{{ thesis.name_kz }}</p>
+        <p>Название темы на ENG:{{ thesis.name_eng }}</p>
+        <p>Описание темы на KZ:{{ thesis.descname_kz }}</p>
+        <p>Описание темы на RU:{{ thesis.descname_ru }}</p>
+        <p>Описание темы на ENG:{{ thesis.descname_eng }}</p>
+        <p>Макс. количества студентов: {{ thesis.count_stud  }}</p>
+            <a class="btn btn-dark" href="{% url 'webapp:thesis_delete' thesis.pk %}">Удалить работу</a>
+            <a class="btn btn-dark" href="{% url 'webapp:thesis_update' thesis.pk %}">Изменить работу</a>
+    </div>
+{% endblock %}

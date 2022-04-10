@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Заказ{% endblock %}
+{% block content %}
+    <div class="m-3">
+    <p>Заказ №{{ order.id }}</p>
+        <p>Статус: {{ order.status }}</p>
+        <p><b>Книги:</b></p>
+{#        {% if order_book.book.id in list %}#}
+        {% for order_book in orderbooks %}
+{#           {% if forloop.counter < len %}#}
+
+        <p>{{ order_book.book.title }}</p>
+{#            <p>количество: {{ order_book.amount }}</p>#}
+
+{#         <a class="btn btn-dark" href="{% url 'webapp:order_book_update' order_book.pk %}">Изменить книгу</a>#}
+{##}
+{#        <a class="btn btn-dark" href="{% url 'webapp:order_book_delete' order_book.pk %}">Удалить книгу</a>#}
+{#            {% endif %}#}
+        {% endfor %}
+{#    {% endif %}#}
+        <hr>
+
+     <div class="mb-3">
+            <a class="btn btn-danger" href="{% url 'webapp:order_update' order.pk %}">Изменить детали заказа</a>
+{#            <a class="btn btn-danger" href="{% url 'webapp:order_book_create' order.pk %}">Добавить книгу</a>#}
+
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Заказ{% endblock %}
+{% block content %}
+    <div class="m-3">
+    <p>Заявка №{{ request.id }}</p>
+        <p>Статус: {{ request.type }}</p>
+        <p><b>Книги:</b></p>
+        {% for request_book in request.request_books.all %}
+        <p>{{ request_book.book.title }}, количество: {{ request_book.amount }}</p>
+
+{#         <a class="btn btn-dark" href="{% url 'webapp:request_book_update' request_book.pk %}">Изменить книгу</a>#}
+{##}
+{#        <a class="btn btn-dark" href="{% url 'webapp:request_book_delete' request_book.pk %}">Удалить книгу</a>#}
+        {% endfor %}
+        <hr>
+
+     <div class="mb-3">
+{#            <a class="btn btn-danger" href="{% url 'webapp:request_update' request.pk %}">Изменить детали заказа</a>#}
+            <a class="btn btn-danger" href="{% url 'webapp:request_book_create' request.pk %}">Добавить книгу</a>
+         <a class="btn btn-danger" href="{% url 'webapp:book_create' %}">Добавить новую книгу</a>
+
+
+        </div>
+    </div>
+{% endblock %}

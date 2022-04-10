@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Издатели{% endblock %}
+{% block content %}
+   <div class="card-deck">
+    {% for b in publisher_list %}
+  <div class="card">
+{#    <img class="card-img-top" src="..." alt="Card image cap">#}
+    <div class="card-body">
+      <h5 class="card-title">Издатель:<a href="{% url 'webapp:publisher_detail' b.pk %}">{{ b.name}}</a></h5>
+      <p class="card-text">Пользыватель:{{ b.user }}</p>
+      <p class="card-text">Номер:<small class="text-muted">{{ b.phone }}</small></p>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+{% endblock %}

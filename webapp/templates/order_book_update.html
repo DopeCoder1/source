@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Изменить заказ{% endblock %}
+
+{% block content %}
+    <h4>Изменить состав заказа:</h4>
+        <h2>Заказ уже доставляется или доставлен</h2>
+        <form action="{% url 'webapp:order_book_update' orderbook.pk %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-dark">Сохранить</button>
+        </form>
+{% endblock %}

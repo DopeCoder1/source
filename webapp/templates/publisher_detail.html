@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Издатель{% endblock %}
+{% block content %}
+    <div class="m-3">
+        <p>Название: {{ publisher.name }}</p>
+        <p>Контакты: {{ publisher.phone }}</p>
+            <a class="btn btn-dark" href="{% url 'webapp:publisher_delete' publisher.pk %}">Удалить издателя</a>
+            <a class="btn btn-dark" href="{% url 'webapp:publisher_update' publisher.pk %}">Изменить издателя</a>
+    </div>
+{% endblock %}

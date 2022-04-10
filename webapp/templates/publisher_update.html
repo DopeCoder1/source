@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Изменить данные издателя{% endblock %}
+{% block content %}
+    <h4>Изменить данные издателя:</h4>
+    <form action="{% url 'webapp:publisher_update' form.instance.pk %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-dark">Сохранить</button>
+    </form>
+{% endblock %}

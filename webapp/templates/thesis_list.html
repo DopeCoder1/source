@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Издатели{% endblock %}
+{% block content %}
+   <div class="card-deck">
+    {% for b in thesiss %}
+  <div class="card">
+{#    <img class="card-img-top" src="..." alt="Card image cap">#}
+    <div class="card-body">
+      <h5 class="card-title">Тема работы:<a href="{% url 'webapp:thesis_detail' b.pk %}">{{ b.name_ru }}</a></h5>
+      <p class="card-text">Студент:{{ b.student.user.first_name }}</p>
+      <p class="card-text">Макс. количество студентов:<small class="text-muted">{{ b.count_stud }}</small></p>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+{% endblock %}

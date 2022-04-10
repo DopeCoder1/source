@@ -1,0 +1,81 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    {% block navbar %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">LIBRARY</a>
+                </li>
+        {% if not user.is_authenticated %}
+{#        <li class="nav-item">#}
+{#                    <a href="{% url 'webapp:regis' %}" class="nav-link">Регистрация</a>#}
+{#                </li>#}
+        <li class="nav-item">
+                    <a href="{% url 'webapp:login' %}" class="nav-link">Авторизация</a>
+                </li>
+        {% endif %}
+
+            <li class="nav-item ml-5">
+                <a href="{% url 'webapp:order_list' %}" class="nav-link">Заказы</a>
+            </li>
+            <li class="nav-item">
+                    <a href="{% url 'webapp:request_list' %}" class="nav-link">Заявки</a>
+                </li>
+            <li class="nav-item">
+                <a href="{% url 'webapp:publisher_list' %}" class="nav-link">Издатели</a>
+            </li>
+                <li class="nav-item">
+                    <a href="{% url 'webapp:book_list' %}" class="nav-link">Книги</a>
+                </li>
+        {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'webapp:order_create' %}" class="nav-link">Создать заказ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'webapp:publisher_create' %}" class="nav-link">Добавить издателя</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'webapp:request_create' %}" class="nav-link">Создать заявку</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'webapp:book_create' %}" class="nav-link">Добавить книгу</a>
+                </li>
+              {% endif %}
+                {% if  user.is_authenticated %}
+        <li class="nav-item">
+                    <a href="{% url 'webapp:exit' %}" class="nav-link">Выйти</a>
+                </li>
+        {% endif %}
+            {% block menu %}{% endblock %}
+        </ul>
+    </div>
+{% endblock navbar %}
+</nav>
+<div class="container mt-4">
+    {% block content %}{% endblock %}
+</div>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

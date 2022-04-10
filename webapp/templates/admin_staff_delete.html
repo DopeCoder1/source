@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Удалить студента{% endblock %}
+
+{% block content %}
+    <h1>Удалить студента</h1>
+    <h5>Вы уверены, что хотите удалить студента "{{ staff.user }}"?</h5>
+    <form action="{% url 'webapp:adminstaff_delete' staff.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Удалить</button>
+    </form>
+{% endblock %}

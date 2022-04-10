@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Cотрудник{% endblock %}
+{% block content %}
+    <div class="m-3">
+        <p>ФИО:{{ staff.user.first_name }} {{ staff.user.last_name }}</p>
+        <p>ИИН:{{ staff.iin }}</p>
+        <p>ЛОГИН:{{ staff.user.username }}</p>
+            <a class="btn btn-dark" href="{% url 'webapp:adminstud_delete' students.pk %}">Удалить работу</a>
+            <a class="btn btn-dark" href="{% url 'webapp:adminstud_update' students.pk %}">Изменить работу</a>
+    </div>
+{% endblock %}

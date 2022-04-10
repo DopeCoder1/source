@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Удалить книгу{% endblock %}
+
+{% block content %}
+    <h1>Удалить книгу</h1>
+    <h5>Вы уверены, что хотите удалить книгу {{ orderbook.pk }} из заказа?</h5>
+    <form action="{% url 'webapp:order_book_delete' orderbook.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Удалить</button>
+    </form>
+{% endblock %}

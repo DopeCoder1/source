@@ -1,0 +1,27 @@
+{#{% extends 'base.html' %}#}
+{#{% block title %}{% endblock %}#}
+{#{% block content %}#}
+{#    {% for request in request_list %}#}
+{#        <h4><a href="{% url 'webapp:request_detail' request.pk %}">Заявка №{{ request.id }}</a></h4>#}
+{#        <p>{{ request.type }} книги "{{ request.request_book.title }}"</p>#}
+{#        <hr>#}
+{#    {% endfor %}#}
+{#{% endblock %}#}
+
+{% extends 'staffbar.html' %}
+{% block title %}Заявки{% endblock %}
+{% block content %}
+   <div class="card-deck">
+     {% for b in request %}
+  <div class="card">
+{#    <img class="card-img-top" src="..." alt="Card image cap">#}
+    <div class="card-body">
+      <h5 class="card-title">Заявка<a href="{% url 'webapp:request_detail' b.pk %}"> №:{{ b.id }}</a></h5>
+{#      <p class="card-text">Книги:{{ b.book.title }}, количество: {{ request_book.amount }}</p>#}
+      <p class="card-text">Тип:<small class="text-muted">{{ b.type }}</small></p>
+    </div>
+  </div>
+
+    {% endfor %}
+</div>
+{% endblock %}

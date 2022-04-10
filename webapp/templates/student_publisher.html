@@ -1,0 +1,9 @@
+{% extends 'student.html' %}
+{% block title %}Publisher{% endblock %}
+{% block content %}
+    {% for book in pub %}
+        <h4><a href="{% url 'webapp:book_detail' book.pk %}">{{ book.name }}</a></h4>
+        <p>{{ book.username }}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}

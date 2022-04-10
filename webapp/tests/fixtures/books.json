@@ -1,0 +1,81 @@
+[
+  {
+    "model": "webapp.book",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "title": "Тачки",
+      "description": "Молния МакКуин и его друг Мэтр отправляются в международное путешествие — когда МакКуин...",
+      "type": "TYPE_PBOOK",
+      "author": "some",
+      "link": "2012-07-12 09:29:41",
+      "amount": 10,
+      "publisher": 1
+    }
+  },
+    {
+    "model": "webapp.book",
+    "pk": 2,
+    "fields": {
+      "title": "Тачки",
+      "description": "Молния МакКуин и его друг Мэтр отправляются в международное путешествие — когда МакКуин...",
+      "type": "TYPE_PBOOK",
+      "author": "some",
+      "link": "2012-07-12 09:29:41",
+      "amount": 10,
+      "publisher": 2
+    }
+  },
+    {
+    "model": "webapp.book",
+    "pk": 3,
+    "fields": {
+      "title": "Тачки",
+      "description": "Молния МакКуин и его друг Мэтр отправляются в международное путешествие — когда МакКуин...",
+      "type": "TYPE_PBOOK",
+      "author": "some",
+      "link": "2012-07-12 09:29:41",
+      "amount": 10,
+      "publisher": 2
+    }
+  },
+    {
+    "model": "webapp.book",
+    "pk": 4,
+    "fields": {
+      "title": "Тачки",
+      "description": "Молния МакКуин и его друг Мэтр отправляются в международное путешествие — когда МакКуин...",
+      "type": "TYPE_PBOOK",
+      "author": "some",
+      "link": "2012-07-12 09:29:41",
+      "amount": 10,
+      "publisher": 2
+    }
+  },
+    {
+    "model": "webapp.book",
+    "pk": 5,
+    "fields": {
+      "title": "Тачки",
+      "description": "Молния МакКуин и его друг Мэтр отправляются в международное путешествие — когда МакКуин...",
+      "type": "TYPE_PBOOK",
+      "author": "some",
+      "link": "2012-07-12 09:29:41",
+      "amount": 10,
+      "publisher": 2
+    }
+  },
+    {
+    "model": "webapp.book",
+    "pk": 6,
+    "fields": {
+      "title": "Тачки",
+      "description": "Молния МакКуин и его друг Мэтр отправляются в международное путешествие — когда МакКуин...",
+      "type": "TYPE_PBOOK",
+      "author": "some",
+      "link": "2012-07-12 09:29:41",
+      "amount": 10,
+      "publisher": 2
+    }
+  }
+]

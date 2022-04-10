@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Сотрудник:{% endblock %}
+{% block content %}
+   <div class="card-deck">
+    {% for b in staff %}
+  <div class="card">
+{#    <img class="card-img-top" src="..." alt="Card image cap">#}
+    <div class="card-body">
+      <h5 class="card-title">ФИО:</h5>
+      <p class="card-text">Логин:<a href="{% url 'webapp:adminstaff_detail' b.pk %}">{{ b.user.username }}</a></p>
+      <p class="card-text">ИИН:<small class="text-muted">{{ b.iin }}</small></p>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+{% endblock %}

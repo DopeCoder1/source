@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Удалить дипломную работу{% endblock %}
+
+{% block content %}
+    <h1>дипломную работу</h1>
+    <h5>Вы уверены, что хотите удалить работу "{{ thesis.title }}"?</h5>
+    <form action="{% url 'webapp:thesis_delete' thesis.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Удалить</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'student.html' %}
+{% block title %}Книга{% endblock %}
+{% block content %}
+    <div class="m-3">
+        <p>Название: {{ book.title }}</p>
+        <p>Описание: {{ book.description }}</p>
+        <p>Версия: {{ book.type }}</p>
+        <p>Автор: {{ book.author }}</p>
+        <p>Издательство: {{ book.publisher.name }}</p>
+        {% if book.amount > 0 %}
+        <p>Количество: {{ book.amount }}</p>
+        {% endif %}
+    </div>
+{% endblock %}

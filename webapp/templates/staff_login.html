@@ -1,0 +1,11 @@
+{% extends 'staffbar.html.html' %}
+{% block title %}Авторизация{% endblock %}
+{% block content %}
+    <h4>Авторизация:</h4>
+    <form method="POST" class="auth-validate-form">
+					{% csrf_token %}
+		{{ form.as_p }}
+    <button type="submit">Авторизация</button>
+
+				</form>
+{% endblock %}

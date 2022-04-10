@@ -1,0 +1,62 @@
+[
+  {
+    "model": "webapp.requestbook",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "request": 1,
+      "book": 1,
+      "amount": 10
+    }
+  },
+    {
+    "model": "webapp.requestbook",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "request": 2,
+      "book": 2,
+      "amount": 10
+    }
+  },
+    {
+    "model": "webapp.requestbook",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "request": 3,
+      "book": 3,
+      "amount": 10
+    }
+  },
+    {
+    "model": "webapp.requestbook",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "request": 1,
+      "book": 2,
+      "amount": 10
+    }
+  },
+    {
+    "model": "webapp.requestbook",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "request": 1,
+      "book": 3,
+      "amount": 10
+    }
+  },
+    {
+    "model": "webapp.requestbook",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "request": 1,
+      "book": 4,
+      "amount": 10
+    }
+  }
+]
